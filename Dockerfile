@@ -56,15 +56,6 @@ RUN \
     curl -L https://github.com/filhocf/roundcube-chameleon-blue/archive/master.tar.gz | \
     tar xz --strip-components=1 -C skins/chameleon-blue
 
-#cd plugins; \
-#echo "Add Kolab's plugin ===============>>>>>>>>>>>>>"; \
-#curl -L https://github.com/filhocf/roundcubemail-plugins-kolab/archive/master.tar.gz | \
-#tar xz && \
-# mv roundcubemail-plugins-kolab-master roundcube-plugins; \
-# ln -s roundcube-plugins/plugins/calendar; \
-# ln -s roundcube-plugins/plugins/libcalendaring; \
-# ln -s roundcube-plugins/plugins/piwik_analytics; \
-# ln -s roundcube-plugins/plugins/tasklist
 
 WORKDIR /var/www/html
 ENTRYPOINT ["/docker-entrypoint.sh"]
