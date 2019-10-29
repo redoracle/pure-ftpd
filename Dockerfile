@@ -56,7 +56,7 @@ RUN \
     curl -L https://github.com/filhocf/roundcube-chameleon-blue/archive/master.tar.gz | \
     tar xz --strip-components=1 -C skins/chameleon-blue
 
-
+VOLUME /datak
 WORKDIR /var/www/html
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
