@@ -3,7 +3,8 @@
 
 Pure-FTPd is a free (BSD), secure, production-quality and standard-conformant FTP server. It doesn't provide useless bells and whistles, but focuses on efficiency and ease of use. It provides simple answers to common needs, plus unique useful features for personal users as well as hosting providers.
 
-docker-compose.yml
+# docker-compose.yml
+
 pure-ftpd:
   image: vimagick/pure-ftpd
   net: host
@@ -14,10 +15,14 @@ pure-ftpd:
   restart: always
 Please config firewall according to PassivePortRange.
 
-server
+----------
+# Server
 $ cd ~/fig/pure-ftpd/
 $ docker-compose up -d
 $ docker-compose exec pure-ftpd bash
+----------
+
+----------
 >>> pure-pw useradd kev -u ftpuser -d /home/ftpuser/kev -t 1024 -T 1024 -y 1 -m
 >>> pure-pw list
 >>> pure-pw show kev
@@ -25,6 +30,9 @@ $ docker-compose exec pure-ftpd bash
 >>> pure-pw userdel kev -m
 >>> pure-ftpwho -n
 >>> exit
+
+----------
+# Tree
 $ tree -F
 .
 ├── docker-compose.yml
@@ -36,7 +44,11 @@ $ tree -F
         ├── pure-ftpd.conf
         ├── pureftpd.passwd
         └── pureftpd.pdb
-client
+        
+----------
+
+# Client
+
 $ ftp remote-server
 Name: kev
 Password: ******
