@@ -3,7 +3,7 @@ services:
   - docker
 env:
   global:
-    - IMAGE_NAME=redoracle/roundcubemail
+    - IMAGE_NAME=redoracle/pure-ftpd
 
 before_script:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
